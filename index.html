@@ -135,7 +135,31 @@ align-content: center ;
 
     }
     </style>
-      
+      <style>
+            .item1 { grid-area: header; }
+            .item2 { grid-area: menu; }
+            .item3 { grid-area: main; }
+            .item4 { grid-area: right; }
+            .item5 { grid-area: footer; }
+            
+            .grid-container {
+              display: grid;
+              grid-template-areas:
+                'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
+              grid-gap: 10px;
+              background-color: #2196F3;
+              padding: 10px;
+            }
+            
+            .grid-container > div {
+              background-color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              padding: 20px 0;
+              font-size: 30px;
+            }
+            </style>
 	</head>
  
 <body>
@@ -250,19 +274,18 @@ align-content: center ;
                         <!-- description for page --> 
                         <div class="fb5-page-book">
                               
-                            <table style="width: 825px; height: 26px;">
-                                <tbody>
-                                <tr>
-                                <td style="width: 40%;    padding: 15px;
-                                margin: auto;"><iframe jsname="L5Fo6c" jscontroller="iNMYje" jsaction="rcuQ6b:WYd;" class="YMEQtf L6cTce-purZT L6cTce-pSzOP" frameborder="0" aria-label="Drive, 2018-08-30_14-15-22.mp4" allowfullscreen="" src="https://drive.google.com/file/d/1ddyOhUIUAVkZ5bFdqF8d8He6XwGPnYxV/preview?authuser=0"></iframe></td>
-                                <td style="width: 40%;    padding: 15px;
-                                margin: auto;"><p style="text-align: justify;" >
-                                    Colombia es un país del extremo norte de Sudamérica. Su paisaje cuenta con bosques tropicales, las montañas de los Andes y varias plantaciones de café. En Bogotá, su capital a gran altura, el distrito Zona Rosa es famoso por sus restaurantes y tiendas. Cartagena, en la costa del Caribe, tiene una Ciudad Antigua colonial amurallada, un castillo del siglo XVI y arrecifes de coral cercanos.
+                     
+<h1>Grid Layout</h1>
 
-                                </p></td>
-                                </tr>
-                                </tbody>
-                                </table>
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+        <div class="item1"><p>This grid layout contains six columns and three rows:</p></div>
+        <div class="item2"><p>This grid layout contains six columns and three rows:</p></div>
+        <div class="item3"><p>This grid layout contains six columns and three rows:</p></div>  
+        <div class="item4"><p>This grid layout contains six columns and three rows:</p></div>
+        <div class="item5"><p>This grid layout contains six columns and three rows:</p></div>
+      </div>
                         </div> 
                                  
                        <!-- number page and title  -->                
